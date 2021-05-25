@@ -1,0 +1,1 @@
+module.exports.help = require('./help.command')
