@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports =  new Sequelize(process.env.DATABASE_URL, {
-  host: 'rogue.db.elephantsql.com',
+  host: process.env.DATABASE_HOST,
   dialect: 'postgres',
   operatorsAliases: false,
 
