@@ -6,20 +6,11 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config()
 
 const { prefix, BaseAPI, db } = require('./config');
+const {  database} = require('./actions')
 const { help } = require('./commands')
 
 // Database Authentication
-db.sync({ alter:true })
-.then((synched) => {
-    console.log(`${synched} All models were synchronized successfully.`)
-})
-.catch((err) => {
-    console.log(err)
-})
-
-db.authenticate()
-    .then(() => console.log('Database connected...'))
-    .catch(err => console.log('Error: ' + err))
+database.run();
 
 let app = express();
 
@@ -30,7 +21,7 @@ app.use(bodyParser.json())
 app.use(cookieParser());
 
 app.get('/', function(req, res) {
-    res.render('This is clickup-bot');
+    res.render('This is Rythm 3.0');
 });
 
 app.use((req, res, next) => {
