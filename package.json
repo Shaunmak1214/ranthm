@@ -1,12 +1,12 @@
 {
-  "name": "clickup-bot",
+  "name": "Ranthm",
   "version": "1.0.0",
-  "description": "This is a discord bot which will take tasks management to the moon!",
+  "description": "This is a discord bot which will take music in discord to the moon",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "npm install && node index.js"
   },
   "keywords": [
     "task-management-bot"
